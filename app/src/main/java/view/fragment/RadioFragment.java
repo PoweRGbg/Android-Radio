@@ -719,6 +719,10 @@ public class RadioFragment extends Fragment implements
             //noinspection ResultOfMethodCallIgnored
             newRep.mkdir();
         }
+        String black_hex = "#FFFFFF";
+        String white_hex = "#000000";
+        Integer black = Integer.parseInt(black_hex.replaceFirst("#", ""), 16);
+        Integer white = Integer.parseInt(white_hex.replaceFirst("#", ""), 16);
 
         String fichier_pref1 = "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n" +
                 "<map>\n" +
@@ -736,8 +740,8 @@ public class RadioFragment extends Fragment implements
                 "    <string name=\"action\"></string>\n" +
                 "    <string name=\"etat\">stop</string>\n" +
                 "    <string name=\"url\">http://87.121.166.208:8000/_a</string>\n" +
-                "    <int name=\"colorRADIO\" value=\"-10752\" />\n" +
-                "    <int name=\"colorTXT\" value=\"-1107296256\" />" +
+                "    <int name=\"colorRADIO\" value=\"-1107296256\" />\n" +
+                "    <int name=\"colorTXT\" value=\"16777215\" />" +
                 "</map>\n";
 
         File file = new File(pref_path + "/" + fichier_préférence + ".xml");
