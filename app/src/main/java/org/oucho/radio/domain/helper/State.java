@@ -22,21 +22,32 @@ package org.oucho.radio.domain.helper;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 
 import org.oucho.radio.domain.player.Player;
 
 public class State
 {
    private static final String intent_state = "org.oucho.radio.STATE";
+   static SharedPreferences preferences;
 
-   public static final String STATE_STOP         = "Stop";
-   public static final String STATE_ERROR        = "Erreur";
-   public static final String STATE_COMPLETE     = "Complété";
-   public static final String STATE_PAUSE        = "Pause";
-   public static final String STATE_PLAY         = "Lecture";
-   public static final String STATE_BUFFER       = "Chargement...";
-   public static final String STATE_DISCONNECTED = "Déconnecté";
+    public static final String STATE_STOP         = "Stopped";
+    public static final String STATE_ERROR        = "Error";
+    public static final String STATE_COMPLETE     = "Complete";;
+    public static final String STATE_PAUSE        = "Paused";;
+    public static final String STATE_PLAY         = "Playing...";
+    public static final String STATE_BUFFER       = "Buffering...";
+    public static final String STATE_DISCONNECTED = "Disconnected!";
 
+
+    /*   public static final String STATE_STOP         = preferences.getString("state_stop", "Stopped");
+   public static final String STATE_ERROR        = preferences.getString("state_error", "Error");
+   public static final String STATE_COMPLETE     = preferences.getString("state_complete", "Complete");;
+   public static final String STATE_PAUSE        = preferences.getString("state_pause", "Paused");;
+   public static final String STATE_PLAY         = preferences.getString("state_play", "Playing...");;
+   public static final String STATE_BUFFER       = preferences.getString("state_buffer", "Buffering...");;
+   public static final String STATE_DISCONNECTED = preferences.getString("state_disconnected", "Disconnected!");;
+*/
    private static String current_state = STATE_STOP;
 
    //private static boolean current_isNetworkUrl = false;

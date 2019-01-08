@@ -24,6 +24,7 @@ import android.support.v7.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.RemoteViews;
@@ -89,28 +90,14 @@ public class RadioFragment extends Fragment implements
 
     private final int[] bouton_ID = {
             R.id.button1,
-            R.id.button2,
-            R.id.button3,
-            R.id.button4,
-            R.id.button5,
             R.id.play,
             R.id.stop,
             R.id.off,
-            R.id.prefs,
-            R.id.timer
     };
 
     private final int[] bouton_radio_text_ID = {
             R.id.n_button1,
-            R.id.n_button2,
-            R.id.n_button3,
-            R.id.n_button4,
-            R.id.n_button5,
             R.id.button1_txt,
-            R.id.button2_txt,
-            R.id.button3_txt,
-            R.id.button4_txt,
-            R.id.button5_txt
     };
 
     private static String nom1;
@@ -151,8 +138,8 @@ public class RadioFragment extends Fragment implements
         préférences = getActivity().getSharedPreferences(fichier_préférence, MODE_PRIVATE);
 
         Typeface fonte = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ds_digii.ttf");
-        TextClock heure = (TextClock) rootView.findViewById(R.id.horloge);
-        heure.setTypeface(fonte);
+        TextClock heure = (TextClock) rootView.findViewById(R.id.time);
+//        heure.setTypeface(fonte);
 
 
         for (int ID : bouton_ID) {
@@ -183,8 +170,8 @@ public class RadioFragment extends Fragment implements
         nomStation.setText(nom_radio);
 
         Typeface fonte = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ds_digii.ttf");
-        TextClock heure = (TextClock) rootView.findViewById(R.id.horloge);
-        heure.setTypeface(fonte);
+        TextClock heure = (TextClock) rootView.findViewById(R.id.time);
+//        heure.setTypeface(fonte);
 
         etat_lecture = préférences.getString("etat", etat_lecture_pref);
 
@@ -197,7 +184,7 @@ public class RadioFragment extends Fragment implements
 
         couleur_radio = préférences.getInt("colorRADIO", couleur_radio_pref);
 
-        RelativeLayout theme_color = (RelativeLayout) rootView.findViewById(R.id.theme);
+        FrameLayout theme_color = (FrameLayout) rootView.findViewById(R.id.theme);
         theme_color.setBackgroundColor(couleur_radio);
 
         couleur_radio_text = préférences.getInt("colorTXT", couleur_radio_text_pref);
@@ -214,14 +201,6 @@ public class RadioFragment extends Fragment implements
         String button5 = préférences.getString("radio5a", nom_radio_pref);
         TextView nomStation10 = (TextView) rootView.findViewById(R.id.button1_txt);
         nomStation10.setText(button1);
-        TextView nomStation20 = (TextView) rootView.findViewById(R.id.button2_txt);
-        nomStation20.setText(button2);
-        TextView nomStation30 = (TextView) rootView.findViewById(R.id.button3_txt);
-        nomStation30.setText(button3);
-        TextView nomStation40 = (TextView) rootView.findViewById(R.id.button4_txt);
-        nomStation40.setText(button4);
-        TextView nomStation50 = (TextView) rootView.findViewById(R.id.button5_txt);
-        nomStation50.setText(button5);
 
         nom_radio = préférences.getString("name", nom_radio_pref);
         action_lecteur = préférences.getString("action", etat_lecture_pref);
@@ -301,38 +280,9 @@ public class RadioFragment extends Fragment implements
                 updatePlayStatus();
                 break;
 
-            case R.id.prefs:
-                vib.vibrate(20);
-                settings();
-                break;
-
-            case R.id.timer:
-                vib.vibrate(20);
-                if (!running) {
-                    showDatePicker();
-                } else {
-                    showTimerInfo();
-                }
-                break;
 
             case R.id.button1:
                 playButton(url1, nom1);
-                break;
-
-            case R.id.button2:
-                playButton(url2, nom2);
-                break;
-
-            case R.id.button3:
-                playButton(url3, nom3);
-                break;
-
-            case R.id.button4:
-                playButton(url4, nom4);
-                break;
-
-            case R.id.button5:
-                playButton(url5, nom5);
                 break;
 
             case R.id.off:
@@ -772,8 +722,8 @@ public class RadioFragment extends Fragment implements
 
         String fichier_pref1 = "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n" +
                 "<map>\n" +
-                "    <string name=\"radio1a\">Europe 1</string>\n" +
-                "    <string name=\"radio1b\">http://e1-live-mp3-128.scdn.arkena.com/europe1.mp3</string>\n" +
+                "    <string name=\"radio1a\">BG Alternative</string>\n" +
+                "    <string name=\"radio1b\">http://87.121.166.208:8000/_a</string>\n" +
                 "    <string name=\"radio2a\">RTL</string>\n" +
                 "    <string name=\"radio2b\">http://streaming.radio.rtl.fr/rtl-1-48-192</string>\n" +
                 "    <string name=\"radio3a\">RMC</string>\n" +
@@ -782,10 +732,10 @@ public class RadioFragment extends Fragment implements
                 "    <string name=\"radio4b\">http://streaming.radio.funradio.fr/fun-1-48-192</string>\n" +
                 "    <string name=\"radio5a\">Virgin Radio</string>\n" +
                 "    <string name=\"radio5b\">http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3</string>\n" +
-                "    <string name=\"name\">Europe 1</string>\n" +
+                "    <string name=\"name\">BG Alternative</string>\n" +
                 "    <string name=\"action\"></string>\n" +
                 "    <string name=\"etat\">stop</string>\n" +
-                "    <string name=\"url\">http://e1-live-mp3-128.scdn.arkena.com/europe1.mp3</string>\n" +
+                "    <string name=\"url\">http://87.121.166.208:8000/_a</string>\n" +
                 "    <int name=\"colorRADIO\" value=\"-10752\" />\n" +
                 "    <int name=\"colorTXT\" value=\"-1107296256\" />" +
                 "</map>\n";

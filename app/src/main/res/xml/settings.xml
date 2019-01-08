@@ -9,13 +9,13 @@
 
         <org.oucho.radio.utils.color.ColorPickerPreference
             android:key="colorRADIO"
-            android:title="Couleur de la radio"
+            android:title="Background color"
             android:defaultValue="@color/jaune"
             hexValue="true"/>
 
         <org.oucho.radio.utils.color.ColorPickerPreference
             android:key="colorTXT"
-            android:title="Couleur du texte des boutons"
+            android:title="Text color"
             android:defaultValue="@color/black75"
             alphaSlider="true"
             hexValue="true"/>
@@ -27,21 +27,21 @@
 
     <PreferenceScreen
         android:key="button_voicemail_setting_key"
-        android:title="Configuration des bouttons de radio"
+        android:title="Radio buttons configuration"
         android:persistent="false">
 
         <PreferenceCategory
-            android:title="Radio 1"/>
+            android:title="BG Altermative"/>
         <EditTextPreference
-            android:title="Nom"
+            android:title="BG Alternative"
             android:capitalize="words"
-            android:defaultValue="Europe 1"
+            android:defaultValue="BG Alternative"
             android:key="radio1a"
             android:singleLine="true"/>
         <EditTextPreference
-            android:title="URL"
+            android:title="http://87.121.166.208:8000/_a"
             android:capitalize="words"
-            android:defaultValue="http://e1-live-aac-64.scdn.arkena.com/europe1.aac"
+            android:defaultValue="http://87.121.166.208:8000/_a"
             android:key="radio1b"
             android:singleLine="true"/>
 

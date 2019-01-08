@@ -217,7 +217,7 @@ public class Player extends Service
       playlist_task = new Playlist(this,url).start();
 
       start_buffering();
-      return done(State.STATE_BUFFER);
+      return done("Buffer");
    }
 
 
@@ -239,7 +239,8 @@ public class Player extends Service
       try
       {
          player.setVolume(1.0f, 1.0f);
-         player.setDataSource(context, Uri.parse(url));
+//         player.setDataSource(context, Uri.parse(url));
+         player.setDataSource(url);
          player.prepareAsync();
       }
       catch (Exception e)
