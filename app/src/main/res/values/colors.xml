@@ -16,7 +16,7 @@
     <color name="test">#bfff9096</color>
     <color name="jaune">#ffd600</color>
 
-    <color name="transparent">#00ffffff</color>
+    <color name="transparent">#00000000</color>
 
     <color name="controls_bg_dark">#ff212121</color>
 

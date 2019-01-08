@@ -107,7 +107,7 @@ public class HomeActivity extends Activity {
                 case 0:
                     return "Radio";
                 case 1:
-                    return "SettingsFragment";
+                    return "Settings";
                 case 2:
                     return "Other";
             }
