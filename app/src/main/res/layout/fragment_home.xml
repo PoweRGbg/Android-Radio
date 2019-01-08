@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="30dp"
     android:id="@+id/theme"
-    android:background="@color/black"
+    android:background="@drawable/grill_big"
     android:textColor="@color/white"
     android:orientation="vertical">
 

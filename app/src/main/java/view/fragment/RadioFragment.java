@@ -719,10 +719,6 @@ public class RadioFragment extends Fragment implements
             //noinspection ResultOfMethodCallIgnored
             newRep.mkdir();
         }
-        String black_hex = "#FFFFFF";
-        String white_hex = "#000000";
-        Integer black = Integer.parseInt(black_hex.replaceFirst("#", ""), 16);
-        Integer white = Integer.parseInt(white_hex.replaceFirst("#", ""), 16);
 
         String fichier_pref1 = "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n" +
                 "<map>\n" +
