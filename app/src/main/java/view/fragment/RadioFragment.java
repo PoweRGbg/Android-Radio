@@ -722,7 +722,7 @@ public class RadioFragment extends Fragment implements
 
         String fichier_pref1 = "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n" +
                 "<map>\n" +
-                "    <string name=\"radio1a\">BG Alternative</string>\n" +
+                "    <string name=\"radio1a\">Kick out radio</string>\n" +
                 "    <string name=\"radio1b\">http://87.121.166.208:8000/_a</string>\n" +
                 "    <string name=\"radio2a\">RTL</string>\n" +
                 "    <string name=\"radio2b\">http://streaming.radio.rtl.fr/rtl-1-48-192</string>\n" +
@@ -732,7 +732,7 @@ public class RadioFragment extends Fragment implements
                 "    <string name=\"radio4b\">http://streaming.radio.funradio.fr/fun-1-48-192</string>\n" +
                 "    <string name=\"radio5a\">Virgin Radio</string>\n" +
                 "    <string name=\"radio5b\">http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3</string>\n" +
-                "    <string name=\"name\">BG Alternative</string>\n" +
+                "    <string name=\"name\">Kick out Radio</string>\n" +
                 "    <string name=\"action\"></string>\n" +
                 "    <string name=\"etat\">stop</string>\n" +
                 "    <string name=\"url\">http://87.121.166.208:8000/_a</string>\n" +

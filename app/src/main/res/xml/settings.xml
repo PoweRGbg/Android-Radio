@@ -1,111 +1,35 @@
 <PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="gone"
     tools:context="view.fragment.SettingsFragment">
-
 <!-- These settings headers are only used on tablets. -->
 
     <PreferenceCategory
-        android:title="Thème">
-
-        <org.oucho.radio.utils.color.ColorPickerPreference
-            android:key="colorRADIO"
-            android:title="Background color"
-            android:defaultValue="@color/jaune"
-            hexValue="true"/>
-
-        <org.oucho.radio.utils.color.ColorPickerPreference
-            android:key="colorTXT"
-            android:title="Text color"
-            android:defaultValue="@color/black75"
-            alphaSlider="true"
-            hexValue="true"/>
-
-</PreferenceCategory>
-
-    <PreferenceCategory
+        android:visibility="gone"
         android:title="Radio"/>
 
-    <PreferenceScreen
-        android:key="button_voicemail_setting_key"
-        android:title="Radio buttons configuration"
-        android:persistent="false">
 
-        <PreferenceCategory
-            android:title="BG Altermative"/>
+    <PreferenceScreen
+        android:visibility="gone"
+        android:key="button_voicemail_setting_key"
+        android:background="@drawable/grill3"
+        android:persistent="false"
+
+        android:title="Radio buttons configuration">
+
+        <PreferenceCategory android:title="Kick out Radio" />
         <EditTextPreference
-            android:title="BG Alternative"
             android:capitalize="words"
-            android:defaultValue="BG Alternative"
+            android:defaultValue="Kick out Radio"
             android:key="radio1a"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:title="Kick out Radio" />
         <EditTextPreference
-            android:title="http://87.121.166.208:8000/_a"
             android:capitalize="words"
             android:defaultValue="http://87.121.166.208:8000/_a"
             android:key="radio1b"
-            android:singleLine="true"/>
-
-
-        <PreferenceCategory
-            android:title="Radio 2"/>
-        <EditTextPreference
-            android:title="Nom"
-            android:key="radio2a"
-            android:capitalize="words"
-            android:defaultValue="RTL"
-            android:singleLine="true"/>
-        <EditTextPreference
-            android:title="URL"
-            android:key="radio2b"
-            android:capitalize="words"
-            android:defaultValue="http://streaming.radio.rtl.fr/rtl-1-44-96"
-            android:singleLine="true"/>
-
-        <PreferenceCategory
-            android:title="Radio 3"/>
-        <EditTextPreference
-            android:title="Nom"
-            android:capitalize="words"
-            android:defaultValue="RMC"
-            android:key="radio3a"
-            android:singleLine="true"/>
-        <EditTextPreference
-            android:title="URL"
-            android:capitalize="words"
-            android:defaultValue="http://rmc.scdn.arkena.com/rmc.mp3"
-            android:key="radio3b"
-            android:singleLine="true"/>
-
-        <PreferenceCategory
-            android:title="Radio 4"/>
-        <EditTextPreference
-            android:title="Nom"
-            android:capitalize="words"
-            android:defaultValue="Fun Radio"
-            android:key="radio4a"
-            android:singleLine="true"/>
-        <EditTextPreference
-            android:title="URL"
-            android:capitalize="words"
-            android:defaultValue="http://streaming.radio.funradio.fr/fun-1-44-96"
-            android:key="radio4b"
-            android:singleLine="true"/>
-
-        <PreferenceCategory
-            android:title="Radio 5"/>
-        <EditTextPreference
-            android:title="Nom"
-            android:capitalize="words"
-            android:defaultValue="NRJ"
-            android:key="radio5a"
-            android:singleLine="true" />
-        <EditTextPreference
-            android:title="URL"
-            android:capitalize="words"
-            android:defaultValue="http://mp3lg3.tdf-cdn.com/5008/nrj_121136.mp3"
-            android:key="radio5b"
-            android:singleLine="true" />
-
+            android:singleLine="true"
+            android:title="http://87.121.166.208:8000/_a" />
 
     </PreferenceScreen>
 </PreferenceScreen>

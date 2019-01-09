@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import org.oucho.radio.R;
 
 import view.fragment.RadioFragment;
-import view.fragment.SettingsFragment;
+//import view.fragment.SettingsFragment;
 
 public class HomeActivity extends Activity {
 
@@ -86,8 +86,8 @@ public class HomeActivity extends Activity {
                 case 0:
                     return new RadioFragment();
 
-                case 1:
-                    return new SettingsFragment();
+//                case 1:
+//                    return new RadioFragment();
 
                 default:
                     return new RadioFragment();
@@ -98,7 +98,7 @@ public class HomeActivity extends Activity {
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return 1;
         }
 
         @Override
