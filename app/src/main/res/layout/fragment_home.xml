@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:background="@drawable/grill_big">
+        android:background="@drawable/grill3">
 
         <TextView
             android:id="@+id/station"
@@ -100,6 +100,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="30dp"
+            android:background="@color/transparent"
             android:scaleType="fitXY"
             android:src="@drawable/bouton_play" />
 
@@ -114,7 +115,8 @@
             android:layout_marginBottom="30dp"
             android:background="@color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/bouton_stop" />
+            android:src="@drawable/bouton_stop"
+            android:visibility="gone" />
 
 
         <TextView
