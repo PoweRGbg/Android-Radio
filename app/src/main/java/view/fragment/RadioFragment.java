@@ -566,12 +566,12 @@ public class RadioFragment extends Fragment implements
      * ********************************************************************************************/
 
     private void updatePlayStatus() {
-        ImageView play = (ImageView) rootView.findViewById(R.id.icon_play);
+//        ImageView play = (ImageView) rootView.findViewById(R.id.icon_play);
 
         if ("stop".equals(etat_lecture) || "pause".equals(etat_lecture)) {
-            play.setBackground(getActivity().getDrawable(R.drawable.ic_equalizer0));
+//            play.setBackground(getActivity().getDrawable(R.drawable.ic_equalizer0));
         } else {
-            play.setBackground(getActivity().getDrawable(R.drawable.ic_equalizer));
+//            play.setBackground(getActivity().getDrawable(R.drawable.ic_equalizer));
         }
     }
 
@@ -580,20 +580,20 @@ public class RadioFragment extends Fragment implements
         AudioManager audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
         int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        ImageView play = (ImageView) rootView.findViewById(R.id.icon_volume);
+//        ImageView play = (ImageView) rootView.findViewById(R.id.icon_volume);
 
         if (currentVolume == 0) {
-            play.setBackground(getActivity().getDrawable(R.drawable.volume0));
+//            play.setBackground(getActivity().getDrawable(R.drawable.volume0));
         } else if (currentVolume < 4) {
-            play.setBackground(getActivity().getDrawable(R.drawable.volume1));
+//            play.setBackground(getActivity().getDrawable(R.drawable.volume1));
         } else if (currentVolume < 7) {
-            play.setBackground(getActivity().getDrawable(R.drawable.volume2));
+//            play.setBackground(getActivity().getDrawable(R.drawable.volume2));
         } else if (currentVolume < 10) {
-            play.setBackground(getActivity().getDrawable(R.drawable.volume3));
+//            play.setBackground(getActivity().getDrawable(R.drawable.volume3));
         } else if (currentVolume < 13) {
-            play.setBackground(getActivity().getDrawable(R.drawable.volume4));
+//            play.setBackground(getActivity().getDrawable(R.drawable.volume4));
         } else if (currentVolume < 16) {
-            play.setBackground(getActivity().getDrawable(R.drawable.volume5));
+//            play.setBackground(getActivity().getDrawable(R.drawable.volume5));
         }
     }
 

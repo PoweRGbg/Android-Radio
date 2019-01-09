@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="false">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -27,10 +27,10 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="50dp"
             android:visibility="gone"
             app:layout_collapseMode="pin"
             app:tabBackground="@color/colorAccent"
-            app:tabGravity="fill"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/black"
             app:tabTextColor="@color/colorPrimary" />

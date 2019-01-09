@@ -10,9 +10,11 @@
 
     <string name="timer_info" formatted="false">%02d:%02d:%02d</string>
     <string name="start">Start</string>
+    <string name="buffering">Buffering</string>
+    <string name="waiting">Waiting...</string>
     <string name="cancel">Cancel</string>
     <string name="continuer">Continue</string>
-    <string name="cancel_timer">annuler le timer</string>
+    <string name="cancel_timer">reset timer</string>
     <string name="impossible">0 impossible</string>
 
 
